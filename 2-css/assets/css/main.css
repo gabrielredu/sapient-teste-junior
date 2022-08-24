@@ -1,1 +1,83 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+:root {
+    --wrapper-bg: #F4F4F4;
+    --white-bg: #FFF;
+    --text-dark: #3C3B3B;
+    --text-light: #828282;
+    --border: #EEEEEE;
+    --menu: #AAAAAA;
+}
+
+html, body, div, span, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+body {
+    background-color: var(--wrapper-bg);
+}
+
+#wrapper {
+    margin: 0 auto;
+}
+
+#header {
+    align-items: center;
+    background-color: var(--white-bg);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    padding: 0px 28px;
+    position: relative;
+}
+
+#header .main_title {
+    align-items: center;
+    border-right: 1px solid var(--border);
+    color: var(--text-dark);
+    display: flex;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 700;
+    height: 64px;
+    letter-spacing: 2.8px;
+    margin-right: 28px;
+    padding-right: 28px;
+    text-transform: uppercase;
+}
+
+#header .links .links_item {
+    border-right: 1px solid var(--border);
+    color: var(--text-light);
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 4.2px;
+    margin-right: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+#header .main {
+    align-items: center;
+    border-left: 1px solid var(--border);
+    display: flex;
+    height: 64px;
+    padding-left: 28px;
+    position: absolute;
+    right: 24px;
+}
+
+#header .main a {
+    color: var(--menu);
+}
+
+#wrapper #main {
+    width: 1160px;
+    margin: 0 auto;
+}
