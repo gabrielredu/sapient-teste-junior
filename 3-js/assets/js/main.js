@@ -10,7 +10,7 @@ window.onload = function() {
   const menuButton = document.querySelector('#menu-button');
   const videoCover = document.querySelector('#video-cover');
   const videoPlayer = document.querySelector('#video-player');
-  const accordionItem = document.querySelector('.item')
+  const accordionList = document.querySelectorAll('.item')
   const wikipediaContent = document.querySelector('.extract');
   const modalButton = document.querySelector('#button-modal');
   const modal = document.querySelector('.modal-wiki');
@@ -36,8 +36,10 @@ window.onload = function() {
     addClassInactiveOnElement(videoCover);
   })
 
-  accordionItem.addEventListener('click', () => {
-    toggleClassActiveOnElement(accordionItem);
+  accordionList.forEach(item => {
+    item.addEventListener('click', () => {
+      toggleClassActiveOnElement(item);
+    })
   })
 
   fetch('https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Alber%20Einstein&origin=*')
